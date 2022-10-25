@@ -19,11 +19,11 @@ nav.nav span{
 }
 
 nav.nav span:nth-child(even) {
-   
+   color: red;
 }
 
-.p-4 .font-italic .list-unstyled li{
-    background-color:  green;
+.mb-0 li{
+    border: 1px solid  green;
 }
 
 .blog-post:nth-child(3) .blog-post-meta a {

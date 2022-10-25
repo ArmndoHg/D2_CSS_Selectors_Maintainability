@@ -367,12 +367,36 @@
     <script>
         /* JS Exercises should go here */
         // Write a JavaScript functionality to add a new link into the navbar
+        const addingLink = function (){
+            const nav = document.querySelector('.nav')
+            const newLink = document.createElement('span')
+            newLink.innerText = ('Music');
+            nav.appendChild(newLink);
+        }
         // Write a JavaScript functionality to change the color of the main heading title
+        const changingHeading = function (){
+            const heading = document.querySelector('h1')
+            heading.style.color = 'coral'
+        }
         // Write a JavaScript functionality to change the background of the jumbotron
-
+        const backGroundColor = function (){
+            const backGround = document.querySelector('.jumbotron')
+            backGround.style.backgroundColor = 'pink'
+        }
         // Write a JavaScript functionality to remove the “twitter” link under the “Elsewhere” section in the aside element. It should happen when the page loads, automatically
-
+        window.onload = function(){
+            const ol = document.getElementsByTagName('ol')[2]
+            const twitter = ol.getElementsByTagName('li')[1]
+            ol.removeChild(twitter)
+        }
         // Write a JavaScript functionality to remove the first 50 characters in the first paragraph for every blog post
+        const remove50 = function () {
+            const blogs = document.querySelectorAll('.blog-post p:nth-child(3)')
+            for (let i = 0; i < blogs.length; i++) {
+                let paragraph = blogs[i].innerText
+                blogs[i].innerText = paragraph.slice(50)
+            }
+        }
         // Write a JavaScript functionality to add a new Blog Post (div with title and text)
         // Write a JavaScript functionality to remove the last Blog Post when the user clicks on the "Older" button
 
