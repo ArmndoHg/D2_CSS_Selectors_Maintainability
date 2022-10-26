@@ -398,7 +398,30 @@
             }
         }
         // Write a JavaScript functionality to add a new Blog Post (div with title and text)
+        const addingBlogPost = function(){
+            const blogNode = document.querySelectorAll('.blog-post')[2]
+
+            const h2 = document.createElement('h2')
+            h2.classList.add('blog-post-title')
+            h2.innerHTML = 'Last blog post tittle'
+
+            const p = document.createElement('p')
+            p.classList.add('blog-post-meta')
+            p.innerHTML = 'Las blog paragraph'
+
+            blogNode.append(h2)
+            blogNode.append(p)
+        }
         // Write a JavaScript functionality to remove the last Blog Post when the user clicks on the "Older" button
+        const btn = document.querySelector('.btn-outline-primary')
+        let lastBlog = document.querySelectorAll('.blog-post')
+
+        const removingPost = function(){
+            lastBlog = lastBlog[lastBlog.length-1]
+            lastBlog.remove()
+        }
+
+        btn.addEventListener('click',removingPost)
 
         // Write a JavaScript functionality that will create an alert with the name of the author every time the user hovers the mouse on an author's name
         // EXTRA Write a JavaScript functionality that will remove the corresponding parent card from the DOM, upon clicking on their “Continue reading” link
